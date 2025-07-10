@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Get In Touch
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			font-family: Georgia, serif;
+		    background: #e3e854;
+background: radial-gradient(circle, rgba(227, 232, 84, 1) 0%, rgba(148, 187, 233, 1) 100%);
+		}
+		.Contact-container{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+		.Contact-left{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap:20px;
+		}
+		.Contact-left-title h2{
+			color: blue;
+			font-weight: bold;
+			font-size: 40px;
+		}
+		.Contact-left-title hr{
+			border: solid;
+			border-radius: 9px;
+			width: 130px;
+			height: 5px;
+			margin-bottom: 18px;
+			border-color: orange;
+		}
+		.Contact-item{
+			width: 400px;
+			height: 50px;
+			color: black;
+			border: none;
+			outline: none;
+			padding-left: 30px;
+			font-weight: 500;
+			border-radius: 18px;
+		}
+		.Contact-item:focus{
+			border: 2px solid blue;
+		}
+		.Contact-left textarea.Contact-item{
+			width: 400px;
+			height: 87px;
+			padding-left: 27px;
+		}
+		.Contact-left button{
+			display: flex;
+			width: 190px;
+			height: 45px;
+			color: white;
+			align-items: center;
+			background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            gap:10px;
+            font-weight: 400;
+            font-size: 24px;
+            cursor: pointer;
+
+		}
+		.Contact-left button img{
+			height: 15px;
+		}
+		.Contact-right img{
+			height: 300px;
+			width: 400px;
+		}
+		.Contact-left button:hover{
+			opacity: 88%;
+			color:tomato;
+		}
+		@media(max-width: 768px){
+			.Contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .Contact-right {
+        display: none !important;
+      }
+
+      .Contact-left {
+        align-items: center;
+      }
+
+      .Contact-item {
+        width: 90vw;
+      }
+
+      .Contact-left button {
+        width: 90vw;
+        justify-content: center;
+		} 
+	</style>
+</head>
+<body>
+<div class="Contact-container">
+	<form action="https://api.web3forms.com/submit" method="POST" class="Contact-left">
+		<div class="Contact-left-title">
+			<h2>
+				Get In Touch
+			</h2>
+			<hr>
+		</div>
+		<input type="hidden" name="access_key" value="7fc451db-b12f-4058-8d29-d6c180b77d36">
+		<input type="text" name="Name" class="Contact-item" placeholder="Your Name" required="">
+		<input type="number" name="Mobile Number" placeholder="Mobile" required="" class="Contact-item">
+		<input type="email" name="E-Mail" class="Contact-item" placeholder="E-Mail" required="">
+		<input type="text" name="State" placeholder="City/State" class="Contact-item"
+		required="">
+		<textarea name="Address" class="Contact-item" placeholder="Your Address" required=""></textarea>
+		<button type="submit">Submit <img src="ar.png" alt=""></button>
+	</form>
+	<div class="Contact-right">
+		<img src="work3.png">
+	</div>
+</div>
+</body>
+</html>
